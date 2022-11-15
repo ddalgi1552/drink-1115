@@ -226,7 +226,7 @@ function changeblock(mb,shake){
 
             document.getElementById('rain').style.backgroundImage=`url(${'../비내리는효과/rain1.png'}),url(${'../비내리는효과/rain2.png'}),url(${'../비내리는효과/rain3.png'})`
 
-            alert("5일차 금주 성공!")
+            alert("마지막 테스트 완료!")
             setTimeout(function() {
              next()
              },4000)
