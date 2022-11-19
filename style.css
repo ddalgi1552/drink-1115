@@ -9,18 +9,22 @@
 }
 
 html{
-  /* overflow-x:hidden;
-  overflow-y:hidden; */
+  overflow-x:hidden;
+  overflow-y:hidden;
 }
+
 body {
+  width: 2240px;
+  height: 1260px;
+  margin:0;
+}
+
+.main{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-content: center;
   text-align: center;
-  height: 100vh;
-  width: 100vw;
-  background: #FFE269;
-  margin:0;
 }
 
 /* D+N과 SCORE에 적용되어있습니다 */
@@ -28,7 +32,7 @@ body {
 h1{
   font-family: 'GangwonEduPowerExtraBoldA';
   margin: 0%;
-  font-size: 30px;
+  font-size: 50px;
   padding: 20px;
   color: white;
 }
@@ -36,7 +40,7 @@ h1{
 h2{
   font-family: 'GangwonEduPowerExtraBoldA';
   margin: 0%;
-  font-size: 30px;
+  font-size: 40px;
   padding: 20px;
   color: white;
 }
@@ -54,7 +58,12 @@ h2{
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height:500px;
+  height:80%;
+}
+
+.main{
+  height: 100%;
+  width: 100%;
 }
 
 
@@ -80,43 +89,52 @@ button.navbtn{
 
 }
 
-.underbar{
-  border-bottom: 1px solid white;
-  width: 100vw;
-}
-
-
 /* 
 게임설명창 디자인입니다 */
 .gamediscribe{
   position: relative;
-  padding-left: 30px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
+  background-color: blue;
 }
 
 
 #g_text{
-  width: 500px;
-  height: auto;
-  text-align: left;
-  padding-top: 40px;
-  font-size: 20px;
+  font-size: 30px;
   font-family: 'GangwonEduPowerExtraBoldA';
   color: black;
+  z-index:15;
+  background-color: red;
+  display: inline-block;
+  text-align: left;
   position: relative;
-  left: 270px;
+  top:150px;
+  right: 100px;
   
 }
 
 #g_backimg{
   position: relative;
-  left: -260px;
+  bottom: 70px;
   width: 1000px;
-  z-index: -10;
+  z-index: 10;
+  background-color: red;
 }
 
-.main{
+/*nav*/
+.nav{
+  background-color: black;
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 126px;
+  position: static;
+}
+
+.navbtn{
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: 'GangwonEduPowerExtraBoldA';
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  color: white;
 }

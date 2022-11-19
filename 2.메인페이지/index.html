@@ -8,33 +8,28 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-  <header>
-    <main>
+  <div class="nav">
+    <button class="navbtn" id="before1">Before 1</button>
+    <button class="navbtn" id="before2">Before 2</button>
+    <button class="navbtn" id="test1">Test 1</button>
+    <button class="navbtn" id="test2">Test 2</button>
+    <button class="navbtn" id="test3">Test 3</button>
+    <button class="navbtn" id="test4">Test 4</button>
+    <button class="navbtn" id="after">After</button>
+  </div>
+  <section class="header">
       <div class="titlemaster">
-        <h1 class="txt-title">당신이 과연 금주를 할 수 있을까요? <br>여기서 성공한다면, 당신을 인정해드리죠!</h1>
-        <h2 class="txt-title2">시작에 앞서, 당신이 음주를 했는지 알아보겠습니다! 미로를 탈출해보세요</h2>
-        <div class="no-drink-poster">
-          <section class="poster">
-            <figure class="bottle">
-              <img src="./소주.png">
-            </figure>
-            <figure class="bottle">
-              <img src="./맥주.png">
-            </figure>
-            <figure class="bottle">
-              <img src="./금지.png">
-            </figure>
-          </section>
-        </div>
+        <img id="mainduck" src="./메인오리.png">
       </div>
       <div class="mazemaster">
         <canvas id="maze"></canvas>
         <input type="text" id="sizeInput" onkeyup="enterkey();"/>
         <label id="text"></label>
+        <img id="mirotext" src="./nextstage.png" >
+        <img id="miroback" src="./미로배경.png">
       </div>
-    </main>
-    </header>
+  </section>
   <script src="main.js"></script>
+  <script src="../main.js"></script>
 </body>
 </html>
