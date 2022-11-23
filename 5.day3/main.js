@@ -49,7 +49,7 @@ function Sojubreaking(){
       ,10)
 
       setTimeout(function(){
-        alert("clear")
+        alert("2번째 테스트 완료!")
         next()}
       ,200)
     }
