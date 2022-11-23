@@ -8,91 +8,90 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body id="realbody">
-  <section id="rain">
-    <div class="nav">
-      <button class="navbtn" id="before1">Before 1</button>
-      <button class="navbtn" id="before2">Before 2</button>
-      <button class="navbtn" id="test1">Test 1</button>
-      <button class="navbtn" id="test2">Test 2</button>
-      <button class="navbtn" id="test3">Test 3</button>
-      <button class="navbtn" id="test4">Test 4</button>
-      <button class="navbtn" id="after">After</button>
-    </div>
-    <div class="daybox">
-      <div>
-        <h1>제 4 영역</h1>
+  <div class="main" id="main">
+    <section id="rain">
+      <div class="nav">
+        <button class="navbtn" id="before1">Before 1</button>
+        <button class="navbtn" id="before2">Before 2</button>
+        <button class="navbtn" id="test1">Test 1</button>
+        <button class="navbtn" id="test2">Test 2</button>
+        <button class="navbtn" id="test3">Test 3</button>
+        <button class="navbtn" id="test4">Test 4</button>
+        <button class="navbtn" id="after">After</button>
       </div>
-      <div id="score">
-        <h2>0</h2>
+      <div class="daybox">
+        <div>
+          <h1 class="blue">제 4 영역</h1>
+        </div>
       </div>
-    </div>
-    <div class="container">
-      <div id="box">
-        <div id="outsidebd">
-          <div id="insidebd">
-            <div id="playground">
+      <div class="container_row">
+        <div id="box">
+          <div id="outsidebd">
+            <div id="insidebd">
+              <div id="playground">
+              </div>
             </div>
           </div>
-        </div>
 
-        <div id="controlbar">
-          <ul class="options">
-            <li><input type="checkbox" id="resizecheck"><label for="resizecheck">Original Size</label></li>
-            <li><input type="checkbox" id="guidecheck" checked="checked"><label for="guidecheck">Number Guide</label></li>
-            <li>
-              <label for="itemsx">Blocks</label>
-              <input type="text" id="itemsx" value="4" onkeyup="ckminblocks(this)" maxlength="1">
-              *
-              <input type="text" id="itemsy" value="4" onkeyup="ckminblocks(this)" maxlength="1">
-            </li>
-            <li>
-              <label for="itemsx">Level</label>
-              <select id="levelselect">
-                <option value="2">Easy</option>
-                <option value="4">Normal</option>
-                <option value="6">Hard</option>
-              </select>
-            </li>
-          </ul>
-          <dl class="timer">
-            <dt>Time : </dt>
-            <dd id="times"><span>00</span>:<span>00</span>:<span>00</span></dd>
-            <dt class="clicks">Click : </dt>
-            <dd id="clicks">0</dd>
-          </dl>
-          <div class="btns">
-            <input type="button" id="showimage" value="Show Image" onclick="showimage()">
-            <input type="button" id="mainbutton" value="Make Game" onclick="makegame()">
+          <div id="controlbar">
+            <ul class="options">
+              <li><input type="checkbox" id="resizecheck"><label for="resizecheck">SIZE UP</label></li>
+              <li><input type="checkbox" id="guidecheck" checked="checked"><label for="guidecheck">Number Guide</label></li>
+              <li>
+                <label for="itemsx">Blocks</label>
+                <input type="text" id="itemsx" value="4" onkeyup="ckminblocks(this)" maxlength="1">
+                *
+                <input type="text" id="itemsy" value="4" onkeyup="ckminblocks(this)" maxlength="1">
+              </li>
+              <li>
+                <label for="itemsx">Level</label>
+                <select id="levelselect">
+                  <option value="2">Easy</option>
+                  <option value="4">Normal</option>
+                  <option value="6">Hard</option>
+                </select>
+              </li>
+            </ul>
+            <dl class="timer">
+              <dt>Time : </dt>
+              <dd id="times"><span>00</span>:<span>00</span>:<span>00</span></dd>
+              <dt class="clicks">Click : </dt>
+              <dd id="clicks">0</dd>
+            </dl>
+            <div class="btns">
+              <input type="button" id="showimage" value="Show Image" onclick="showimage()">
+              <input type="button" id="mainbutton" value="Make Game" onclick="makegame()">
+            </div>
           </div>
-        </div>
 
 
-        <div id="message">
-          <p>&nbsp;</p>
-        </div>
-        <div id="guideimage"></div>
+          <div id="message">
+            <p>&nbsp;</p>
+          </div>
+          <div id="guideimage"></div>
       </div>
 
-          
+        
+      </div>
+            <!-- //공통적으로 들어가는 게임 설명창 -->
+      <div class="gamediscribe" >
+        <div class="gamediscribe_text"id="gamediscribe_text">
+          <p id="g_text" >
+            벌써 여기까지 오셨네요<br>
+            금주를 하는 것은 이 퍼즐만큼이나 어려워요. <br>
+            그래도 당신은 해낼 수 있다는 것을 보여주세요!<br>
+            (sizeup을 체크하고 다시섞기 버튼을 체크해주세요)
+            
+          </p>
         </div>
-      <!-- //공통적으로 들어가는 게임 설명창 -->
-  <div class="gamediscribe">
-    <div class="gamediscribe_text">
-      <p id="g_text" >
-        <br>금주를 하는 것은 이 퍼즐만큼이나 어려워요. <br>
-        그래도 당신은 해낼 수 있다는 것을 보여주세요!
-      </p>
-    </div>
-    <div class="gamediscribe_background">
-      <img id="g_backimg" src="../말풍선1.svg">
-    </div>
-  </div>  
+        <div class="gamediscribe_background">
+          <img id="g_backimg" src="../말풍선1.png">
+        </div>
+      </div> 
+    
+    </section> 
+  </div>
   </body>
-
-
-
-
-  </section>
   <script src="main.js"></script>
   <script src="../main.js"></script>
 </html>

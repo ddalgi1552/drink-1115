@@ -193,7 +193,7 @@ function mixup(){
 				i--;
 			}else{
 				settingcomplete=true;
-				mainbtn.value='Remix';
+				mainbtn.value='다시 섞기';
 				setmsg();
 			}
 		}else{
@@ -270,13 +270,13 @@ function showimage(hide){
 		if(wr) html+='width:'+ow+';height:'+oh+';">';
 		else html+=ss+':'+ssv+';">';
 		guidediv.innerHTML=html;
-		sibtn.value='Hide Image';
+		sibtn.value='힌트 이미지 닫기';
 		sibtn.onclick=function(){
 			showimage(true);
 		}
 	}else{
 		guidediv.style.display='none';
-		sibtn.value='Show Image';
+		sibtn.value='힌트 이미지 보기';
 		sibtn.onclick=function(){
 			showimage();
 		}

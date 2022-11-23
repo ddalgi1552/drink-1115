@@ -1,32 +1,65 @@
-var tt;
-let count= 0
-let score = document.getElementById("score")
-$( function() {
-  for(let i=0; i<10; i++) {
-    $( `#draggable${i}` ).draggable();
-    $( `#draggable${i}` ).on('dragstart', function(evt) {
-         tt = event.target.id;                    
-     });
+let count= 0 /* 클릭 수를 카운트하기 위한 변수 */
+let t= 0 /* 타이머를 올리기 위한 변수 */
+let state = 1
 
-    $( `#droppable${i}` ).droppable({
-      drop: function( event, ui ) {
 
-     
-        $(`#roo${i}`).attr("src","soju2.png");
-        document.getElementById("soju" + tt.slice(4,5)).style.display = "none";
-        count++
-        if (count==10){
-          alert("3번째 테스트 완료!")
-          next()
-        }
-        score.innerHTML= `<h2>${count}</h2>`
+/*timer*/
+let interval = setInterval(function(){
+    t++
+    score.innerHTML=`<h2>${t}</h2>`
+  if(t>=10){
+    state=-1
+    alert("아이구, 너무 느려요. 사실은 소주 마시고싶어서 그랬죠?")
+    clearInterval(interval)
+    reload()
+    
+  }
+
+}, 1000)
+
+
+/*sojuclick game*/
+let soju= document.getElementById("soju")
+let score= document.getElementById("score")
+soju.addEventListener('click', Sojubreaking)
+function Sojubreaking(){
+  if(state==1){
+    count ++;
+    console.log(count);
+    score.innerHTML=`<h2>${t}</h2>`
+    if(count>=10 && count<20){
+      console.log("10보다 많이 클릭함")
+      document.getElementById("soju").src="./소주깨기3.png"
+    }
+    else if(count>20 && count<=30){
+      console.log("20보다 많이 클릭함")
+      document.getElementById("soju").src="./소주깨기3.png"
+    }
+    else if(count>30 && count<=40){
+      console.log("30보다 많이 클릭함")
+      document.getElementById("soju").src="./소주깨기2.png"
+    }
+    
+    if(count==40){
+      setTimeout(function(){
+        document.getElementById("soju").src="./소주깨기1.png"
+        clearInterval(interval)
+        return
       }
-    });
+      ,10)
+
+      setTimeout(function(){
+        alert("clear")
+        next()}
+      ,200)
+    }
+
+
+
+  }
+
+
 }
-
-
-} );
-
 
 
   //nav bar button
@@ -48,5 +81,8 @@ $( function() {
       location.href=('../7.day5/index.html');
   }
   
-  
+  function reload(){
+    location.href=('../5.day3/index.html');
+}
+
   

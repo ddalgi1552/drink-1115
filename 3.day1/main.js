@@ -18,7 +18,7 @@ function enterkey() {
     }
     if (a >= MAX && !flag) {
     
-        document.getElementById("realback").style.backgroundImage=`url(${'./막걸리펑.jpg'})` ;
+        document.getElementById("main").style.backgroundImage=`url(${'./막걸리펑.jpg'})` ;
         console.log("실행되고있습니다")
         flag = 1
         setTimeout(function() {

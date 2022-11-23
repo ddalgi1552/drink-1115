@@ -1,3 +1,4 @@
+@import url(../navbar/style.css);
 
 @font-face {
   font-family: 'GangwonEduPowerExtraBoldA';
@@ -7,9 +8,6 @@
 }
 
 html{  
-  overflow-x:hidden;
-  overflow-y:hidden;
-  background-color: black;
 }
 
 input[type=checkbox] {
@@ -53,9 +51,9 @@ body{
   margin: 0;
   background-color: #FFE269;
   cursor: url('../2.메인페이지/마우스.png'), auto;
-  width: 2240px;
-  height: 1260px;
-  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 .container{
@@ -74,7 +72,7 @@ body{
 img{
   width: 60%;
   position:absolute;
-  bottom: 20%;
+  bottom: -130px;
   left: 50%;
   transform: translate(-50%, 100%);
 }
@@ -101,11 +99,10 @@ img{
   transform: scale(1.2);
   cursor: pointer;
 }
-.heading-next{
-  margin-top: 220px;
+.testbox{
+  margin-top: 420px;
   z-index: 1;
   position:absolute;
-  top:30%
 }
 
 .input-box{
@@ -113,25 +110,4 @@ img{
   text-align: left;
   margin-top: 10px;
   line-height:50px;
-}
-
-
-/*nav*/
-.nav{
-  background-color: black;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  height: 10%;
-  position: static;
-}
-
-.navbtn{
-  margin-top: 0.6rem;
-  font-size: 1.5rem;
-  font-family: 'GangwonEduPowerExtraBoldA';
-  border: 0;
-  outline: 0;
-  background-color: transparent;
-  color: white;
 }

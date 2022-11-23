@@ -1,3 +1,6 @@
+@import url(../navbar/style.css);
+
+
 @font-face {
   font-family: 'GangwonEduPowerExtraBoldA';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
@@ -16,8 +19,8 @@ body{
   margin:0;
   background-color: #FFE269;
   cursor: url('./마우스.png'), auto;
-  width: 2240px;
-  height: 1260px;
+  width: 100vw;
+  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -30,13 +33,15 @@ body{
   flex-direction: row;
   width: 100%;
   height: 90%;
+  position: relative;
+  bottom: -10%;
 }
 
 /*maze*/
 
 .mazemaster{
   width: 50%;
-  height: 100%;
+  height: 9fr;
   overflow-x:hidden;
   overflow-y:hidden;
 }
@@ -66,12 +71,12 @@ body{
 }
 
 #mirotext{
-  position: relative;
+  position: fixed;
   z-index: 30;
   width: 10%;
   height: auto;
   top:50%;
-  left: 100px;
+  right:1%;
 }
 
 
@@ -87,24 +92,4 @@ body{
   width: 100%;
   position: relative;
   bottom: -10%;
-}
-
-/*nav*/
-.nav{
-  background-color: black;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  height: 10%;
-  position: static;
-}
-
-.navbtn{
-  margin-top: 0.6rem;
-  font-size: 1.5rem;
-  font-family: 'GangwonEduPowerExtraBoldA';
-  border: 0;
-  outline: 0;
-  background-color: transparent;
-  color: white;
 }

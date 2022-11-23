@@ -10,8 +10,7 @@
 </head>
 
 <body id="realback" onkeyup="enterkey()" >
-  <div class="main">
-    <header>
+  <div class="main" id="main">
       <div class="nav">
         <button class="navbtn" id="before1">Before 1</button>
         <button class="navbtn" id="before2">Before 2</button>
@@ -29,31 +28,27 @@
           <h2>0</h2>
         </div>
       </div>
-  
-  
-      <div class="container" id="day1img">
+      <div class="container_row" id="day1img">
             <div class="key" id="ArrowLeft"></div>
             <img src="./막걸리흔들기1.png" id="img">
             <div class="key" id="ArrowRight"></div>
       </div>
-  
-            <!-- //공통적으로 들어가는 게임 설명창 -->
-            <div class="gamediscribe">
-              <div class="gamediscribe_text">
-                <p id="g_text" >
-                  비 오는 날, 막걸리와 파전이 당신을 유혹하는데<br>
-                  당신은 막걸리를 참을 수 있나요?<br>
-                  막걸리를 흔들면 막걸리가 터지게됩니다!</p>
-              </div>
-              <div class="gamediscribe_background">
-                <img id="g_backimg" src="../말풍선1.png">
-              </div>
-            </div>
-            
-
-
-
-    </header>
+      <div class="middlediscribe">
+        <p>좌우 방향키를 눌러보세요!</p>
+      </div>
+      <!-- //공통적으로 들어가는 게임 설명창 -->
+      <div class="gamediscribe">
+        <div class="gamediscribe_text">
+          <p id="g_text" >
+            비 오는 날, 막걸리와 파전이 당신을 유혹하는데<br>
+            당신은 막걸리를 참을 수 있나요?<br>
+            막걸리를 흔들면 막걸리가 터지게됩니다!</p>
+        </div>
+        <div class="gamediscribe_background">
+          <img id="g_backimg" src="../말풍선1.png">
+        </div>
+      </div>
+      
   </div>
   <script src="main.js"></script>
   <script src="../main.js"></script>

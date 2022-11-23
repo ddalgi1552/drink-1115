@@ -1,6 +1,4 @@
 /*공통적으로 쓰이게 될 속성들입니다 */
-
-
 @font-face {
   font-family: 'GangwonEduPowerExtraBoldA';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
@@ -14,18 +12,11 @@ html{
 }
 
 body {
-  width: 2240px;
-  height: 1260px;
+  width: 100vw;
+  height: 100vh;
   margin:0;
 }
 
-.main{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: center;
-  text-align: center;
-}
 
 /* D+N과 SCORE에 적용되어있습니다 */
 
@@ -49,51 +40,40 @@ h2{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 100px;
+  height: 10%;
 }
 
-.container{
+.container_row{
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height:80%;
+  height:40%;
+}
+
+.container_column{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height:40%;
 }
 
 .main{
   height: 100%;
   width: 100%;
-}
-
-
-
-/* navbar */
-
-.nav{
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
-button.navbtn{
-  margin-top: 10px;
-  font-family: 'GangwonEduPowerExtraBoldA';
-  font-size: 20px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: transparent;
-  border: none;
-  color: white;
-  padding: 20px;
-
-}
-
-/* 
-게임설명창 디자인입니다 */
+/* 게임설명창 디자인입니다 */
 .gamediscribe{
-  position: relative;
-  background-color: blue;
+  height: auto;
+  text-align: center;
+  padding-bottom: 5%;
 }
 
 
@@ -102,7 +82,6 @@ button.navbtn{
   font-family: 'GangwonEduPowerExtraBoldA';
   color: black;
   z-index:15;
-  background-color: red;
   display: inline-block;
   text-align: left;
   position: relative;
@@ -116,25 +95,13 @@ button.navbtn{
   bottom: 70px;
   width: 1000px;
   z-index: 10;
-  background-color: red;
 }
 
-/*nav*/
-.nav{
-  background-color: black;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  height: 126px;
-  position: static;
-}
-
-.navbtn{
-  margin-top: 10px;
-  font-size: 20px;
+.middlediscribe{
+  text-align: center;
+  display: inline-block;
+  font-size: 30px;
   font-family: 'GangwonEduPowerExtraBoldA';
-  border: 0;
-  outline: 0;
-  background-color: transparent;
-  color: white;
+  color: black;
+  height: 10%;
 }

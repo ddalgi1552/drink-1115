@@ -1,5 +1,7 @@
+
 @import url(../style.css);
 
+@import url(../navbar/style.css);
 /* 이 파일에서만 쓰이는 속성들입니다. */
 
 /* 화살표 속성이며 js와 연동되어 있습니다 */

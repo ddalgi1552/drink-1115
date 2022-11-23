@@ -1,18 +1,17 @@
 @import url(../style.css);
 @import url(../비내리는효과/style.css);
+@import url(../navbar/style.css);
 *{
 	margin:0;
 	padding:0;
 }
-#realbody{
+
+.main{
   background-image: url("./맑음.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
-*:first-child+html body{font-size:12px;}
-body,input,select{
-	font-family:tahoma,arial,sans-serif,verdana;
-}
+
 ul,ul li{
 	list-style:none;
 }
@@ -22,14 +21,14 @@ ul,ul li{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-	position:relative;
-	top:-50px;
-	text-align:left;
-	width:300px;
-	margin:0;
+	text-align:left;	
+	height: 100%;
+	width: 100%;
 }
+
+
 #box #controlbar{
-	width:300px;
+	width:100%;
 	z-index:5;
 }
 #box #controlbar ul.options{
@@ -141,8 +140,8 @@ ul,ul li{
 *html #insidebd{height:1px;}
 #playground{
 	position:relative;
-	width:203px;
-	height:203px;
+	width:50%
+	height:auto;
 }
 #playground ul li{
 	position:absolute;
@@ -192,4 +191,15 @@ div.opacity{
 #guideimage{
 	overflow:hidden;
 	z-index:4;
+}
+
+
+
+
+.blue{
+	color: darkblue;
+}
+#gamediscribe_text{
+	position:relative;
+	bottom: 10px;
 }

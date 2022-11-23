@@ -1,0 +1,43 @@
+@import url(../style.css);
+@import url(../navbar/style.css);
+p{
+    font-family: 'GangwonEduPowerExtraBoldA';
+    font-size: 4rem;
+
+  }
+
+
+  .textbox{
+    font-family: 'GangwonEduPowerExtraBoldA';
+    font-size: 2rem;
+    text-align: center;
+    background-color: transparent;
+    color: red;
+  }
+
+  .imagebox{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  body{
+    background-color: black;
+  }
+
+#img1{
+width: 100%;
+height: auto;
+position: relative;
+}
+#img2{
+    width: 100%;
+    height: auto;
+    position: relative;
+    }
+    #img3{
+        width: 100%;
+        height: auto;
+        position: relative;
+        }
