@@ -20,17 +20,78 @@
           </div>
     </header>
     <main>
+        <div class="question">
+          <p>미래를 바꾸시겠습니까?</p>
+          <button>yes</button>
+        </div>
         <div class="textbox">
             <p>하지만, 금주는 게임 같은 것이 아닙니다</p>
+            <div id="ticker1" class="ticker" data-speed="10" data-gap="480">
+              <p>
+                <span>
+                  [경고] 간수치가 너무 높습니다. 간수치가 너무 높습니다. &emsp; &emsp; [부고] 000씨 간암으로 사망하셨습니다 &emsp; &emsp; [부고] 000씨 간암으로 사망하셨습니다 &emsp; &emsp; [부고] 000씨 간암으로 사망하셨습니다
+                </span>
+              </p>
+            </div>
+
           </div> 
-      <div class="imagebox">
-        <img id="img1" src="./사고2.jpeg">
-        <img id="img2" src="./사고3.jpg">
-        <img id="img3" src="./사고4.jpeg">
-      </div>
     </main>
 </body>
 <script src="../main.js"></script>
 <script>
+  bhTicker("ticker",2);
+
+function bhTicker(cl,speed) {
+	let t = document.getElementsByClassName(cl);
+	let ta = []; let ts=[]; let tg=[]; let tw=[];
+	let container,mover,text,textWidth;
+
+	for(let i=0; i<t.length; i++){
+		container = t[i];
+		mover = container.getElementsByTagName("p").item(0);
+		text = mover.getElementsByTagName("span").item(0);
+
+		// set
+		mover.style.position = "absolute";
+		mover.style.margin = "0 0 0 0";
+		mover.style.left = "0px";
+		mover.leftPosition = 0;
+		mover.style.width = text.childNodes.item(0).length + "em";	// stretch width
+		textWidth = text.offsetWidth;
+
+		let speed2 = t[i].dataset.speed;
+		if (textWidth > container.offsetWidth) {
+			if(speed2 == 1){speed2 = 2};
+			mover.style.width = textWidth * speed2 + "px";
+			
+			for(let k=0;k<speed2;k++){
+				mover.innerHTML += mover.innerHTML;	
+			}
+		}
+
+		tw.push(textWidth);
+		tg.push(t[i].dataset.gap);
+		ts.push(t[i].dataset.speed);
+		ta.push(mover);
+	}
+
+	let tickerAction = function() {
+		for(let j=0;j<ta.length;j++){
+			let speed = parseInt(ts[j]);
+			let gap = parseInt(tg[j]);
+			let tw2 = tw[j];
+
+			if (ta[j].leftPosition * -speed > tw2*speed) {
+				ta[j].leftPosition = -speed;
+			} else {
+				ta[j].leftPosition -= speed;
+			}
+
+			ta[j].style.left = (-gap + ta[j].leftPosition) + "px";
+		}
+		window.requestAnimationFrame(tickerAction);
+	};
+	tickerAction();
+}
 </script>
 </html>

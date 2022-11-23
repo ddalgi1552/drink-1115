@@ -18,26 +18,27 @@ p{
   .imagebox{
     width: 100%;
     height: auto;
-    display: flex;
-    justify-content: center;
   }
 
   body{
     background-color: black;
   }
 
-#img1{
-width: 100%;
-height: auto;
-position: relative;
+.question{
+  text-align: center;
+  color: aliceblue;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 37%;
 }
-#img2{
-    width: 100%;
-    height: auto;
-    position: relative;
-    }
-    #img3{
-        width: 100%;
-        height: auto;
-        position: relative;
-        }
+button{
+  color: #212529;
+  background-color: #ffc107;
+  width: 10rem;
+  height: 6rem;
+  font-family: 'GangwonEduPowerExtraBoldA';
+  font-size: 4rem;
+  border: transparent;
+  border-radius: 10%;
+}
