@@ -43,3 +43,8 @@ button{
   border: transparent;
   border-radius: 10%;
 }
+
+#after{
+  color: red;
+  font-size: 2rem;
+}
