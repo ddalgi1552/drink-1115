@@ -52,7 +52,7 @@ function Sojubreaking(){
 
 
       setTimeout(function(){
-        alert("2번째 테스트 완료!")
+        alert("3번째 테스트 완료!")
         next()}
       ,200)
     }
