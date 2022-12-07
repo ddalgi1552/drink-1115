@@ -51,7 +51,7 @@ function initialize(){
 	
 	cx=0; cy=1;
 	// character initial position
-	ctx.fillStyle="green";
+	ctx.fillStyle="red";
 	ctx.fillRect(cx*gs,cy*gs,gs, gs);
 	
 }
@@ -84,7 +84,7 @@ function keyPush(evt){
 		cy-=yv;
 		return;
 	}else{
-		ctx.fillStyle="green";
+		ctx.fillStyle="red";
 		ctx.fillRect(cx*gs,cy*gs,gs, gs);
 		ctx.fillStyle="white";
 		ctx.fillRect((cx-xv)*gs,(cy-yv)*gs,gs, gs);

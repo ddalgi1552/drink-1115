@@ -23,30 +23,33 @@ let soju= document.getElementById("soju")
 let score= document.getElementById("score")
 soju.addEventListener('click', Sojubreaking)
 function Sojubreaking(){
+  play()
   if(state==1){
     count ++;
     console.log(count);
     score.innerHTML=`<h2>${t}</h2>`
-    if(count>=10 && count<20){
+    if(count>=5 && count<10){
       console.log("10보다 많이 클릭함")
       document.getElementById("soju").src="./소주깨기3.png"
     }
-    else if(count>20 && count<=30){
+    else if(count>10 && count<=15){
       console.log("20보다 많이 클릭함")
       document.getElementById("soju").src="./소주깨기3.png"
     }
-    else if(count>30 && count<=40){
+    else if(count>15 && count<=20){
       console.log("30보다 많이 클릭함")
       document.getElementById("soju").src="./소주깨기2.png"
     }
     
-    if(count==40){
+    if(count==20){
       setTimeout(function(){
         document.getElementById("soju").src="./소주깨기1.png"
-        clearInterval(interval)
+        clearInterval(interval);
+        play2();
         return
       }
       ,10)
+
 
       setTimeout(function(){
         alert("2번째 테스트 완료!")
@@ -86,3 +89,15 @@ function Sojubreaking(){
 }
 
   
+
+//sound
+
+function play(){
+  let audio = document.getElementById("audio1");
+  audio.play();
+}
+
+function play2(){
+  let audio = document.getElementById("audio2");
+  audio.play();
+}

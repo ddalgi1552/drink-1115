@@ -227,6 +227,7 @@ function changeblock(mb,shake){
             document.getElementById('rain').style.backgroundImage=`url(${'../비내리는효과/rain1.png'}),url(${'../비내리는효과/rain2.png'}),url(${'../비내리는효과/rain3.png'})`
 
             alert("마지막 테스트 완료!")
+			play2()
             setTimeout(function() {
              next()
              },4000)
@@ -340,3 +341,18 @@ makegame();
   
   
   
+
+
+
+
+  //sound
+
+function play(){
+	let audio = document.getElementById("audio1");
+	audio.play();
+  }
+  
+  function play2(){
+	let audio = document.getElementById("audio2");
+	audio.play();
+  }

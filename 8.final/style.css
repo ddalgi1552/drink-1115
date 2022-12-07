@@ -1,21 +1,7 @@
 @import url(../style.css);
 @import url(../navbar/style.css);
 
-  p{
-    font-family: 'GangwonEduPowerExtraBoldA';
-    font-size: 4rem;
-
-  }
-
-
-  .textbox{
-    font-family: 'GangwonEduPowerExtraBoldA';
-    font-size: 2rem;
-    text-align: center;
-    background-color: transparent;
-  }
-
   #congratu{
     width: 100%;
-    height: auto;
+    height: 100%;
   }

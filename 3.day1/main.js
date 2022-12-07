@@ -4,6 +4,7 @@ let score = document.getElementById('score')
 const MAX = 50
 let flag = 0
 function enterkey() {
+    play()
     if(!flag){
         if (window.event.keyCode == 37 && state == 0) {
             document.getElementById("img").src = "./막걸리흔들기1.png";
@@ -36,11 +37,12 @@ function enterkey() {
 
         setTimeout(function() {
             document.getElementById("img").src = "./막걸리터짐.png";
+            play2()
         },600)
         setTimeout(function() {
             alert("1번째 테스트 완료!")
             next()
-          }, 700);
+          }, 1000);
     }
     return document.getElementById('score').innerHTML=`<h2>${a}</h2>`
 
@@ -84,3 +86,15 @@ function next(){
 }
 
 
+
+//sound
+
+function play(){
+    let audio = document.getElementById("audio1");
+    audio.play();
+}
+
+function play2(){
+    let audio = document.getElementById("audio2");
+    audio.play();
+  }

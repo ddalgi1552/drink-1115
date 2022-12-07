@@ -28,6 +28,7 @@ function enlarge(){
     state = 0
     clearInterval(interval)
     alert("2번째 테스트 완료!")
+    play2()
     setTimeout(function() {
      next()
   },1000)
@@ -37,6 +38,7 @@ function enlarge(){
 //인풋값을 받아온다...
 
 function printName()  {
+  play()
   const ideaValue = document.getElementById('ideainputbox').value;
   // document.getElementById("result").innerText= data;
   data.push(ideaValue)
@@ -92,4 +94,13 @@ function randomBH(min, max){
   }
   
   
+  //sound
+  function play(){
+    let audio = document.getElementById("audio1");
+    audio.play();
+  }
   
+  function play2(){
+    let audio = document.getElementById("audio2");
+    audio.play();
+  }
