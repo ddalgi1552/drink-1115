@@ -93,3 +93,8 @@ body{
   position: relative;
   bottom: -10%;
 }
+
+#before2{
+  color: #ffe269;
+  font-size: 2rem;
+}
